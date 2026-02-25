@@ -137,10 +137,10 @@ export class AppRoutingModule { }
 
 Add the `RouterOutlet` to `src/app/app.component.html`
 ```html
-<router-outlet />
+<router-outlet></router-outlet>
 ```
 
-`src/app/app.component.css`
+`src/styles.css`
 ```css
-
+body { margin: 0; }
 ``` 
