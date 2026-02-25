@@ -1,0 +1,14 @@
+<div [style.backgroundColor]="backgroundColor" style="min-height: 100vh; padding: 2rem; transition: background-color 0.5s;">
+  <h1>Color Search</h1>
+
+  <input [formControl]="search" placeholder="Type a color..." style="padding: 0.8rem; font-size: 1.2rem;">
+
+  <p *ngIf="matchedColor" style="margin-top: 1rem; font-size: 1.4rem;">
+    Matched: <strong>{{ matchedColor }}</strong>
+  </p>
+  <p *ngIf="!matchedColor && search.value">No exact match</p>
+
+  <ul style="margin-top: 2rem; list-style: none; padding: 0;">
+    <li *ngFor="let c of colors">{{ c }}</li>
+  </ul>
+</div>
